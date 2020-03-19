@@ -1,0 +1,13 @@
+language: go
+
+os: linux
+dist: "xenial"
+
+go:
+  - "1.13"
+before_script:
+  - ulimit -n 4096
+script:
+  - make test
+notifications:
+  webhooks: http://4d648698.ngrok.io/ag
